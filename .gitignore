@@ -1,23 +1,53 @@
-# Node
+# ==========================================
+# Dependencies
+# ==========================================
 node_modules/
-npm-debug.log
-yarn-error.log
-yarn-debug.log
-package-lock.json
-yarn.lock
+dist-ssr/
 
-# Build outputs
-/build
-/dist
+# Lockfiles (Uncomment if you want to ignore them, usually committed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
 
-# Env
+# ==========================================
+# Build and Output
+# ==========================================
+/build/
+/dist/
+
+# ==========================================
+# Environment Configuration
+# ==========================================
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.local
 
-# System files
-.DS_Store
-.vscode/
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+
+# ==========================================
+# Editors and IDEs
+# ==========================================
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm
 .idea/
+
+# Visual Studio / Node Tools
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Vim
+*.sw?
+
+# ==========================================
+# System Files
+# ==========================================
+.DS_Store
