@@ -11,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]        # changed from 16.x
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: 'false'     # avoid trying to update broken submodules
+          fetch-depth: 0
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
