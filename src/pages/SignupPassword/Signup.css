@@ -1,0 +1,20 @@
+.signup-subtitle {
+  text-align: center;
+  color: #5f6b7a;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 16px;
+  flex-direction: row;
+}
+
+.login-link {
+  color: #2f80ed;
+  cursor: pointer;
+  font-weight: 600;
+}
