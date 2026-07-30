@@ -1,0 +1,55 @@
+.topbar {
+   display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    gap:20px;
+
+    padding:16px 35px;
+}
+
+.notification-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid #E5E5E5;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: .2s;
+}
+
+.notification-btn:hover {
+    background: #f7f7f7;
+}
+
+.logout-btn {
+    border:none;
+    background:#4EA8FF;
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    width:auto;
+}
+
+.logout-btn:hover {
+    background: #3B97F3;
+}

@@ -1,0 +1,143 @@
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #1F2A63;
+    color: white;
+}
+
+/* ---------- Brand ---------- */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 28px 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.brand-logo {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: white;
+    color: #1F2A63;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.brand-details p {
+    margin: 4px 0 0;
+    opacity: .75;
+    font-size: 14px;
+}
+
+/* ---------- Navigation ---------- */
+
+.sidebar-nav {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 25px 14px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 16px;
+
+    color: rgba(255,255,255,.8);
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: .25s;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,.08);
+    color: white;
+}
+
+.sidebar-link.active {
+    background: #4EA8FF;
+    color: white;
+}
+
+.sidebar-icon {
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+
+.sidebar-footer {
+    padding: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.logout-btn {
+    width: 100%;
+
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: white;
+
+    background: #E74C3C;
+
+    transition: .25s;
+}
+
+.logout-btn:hover {
+    background: #d63b2b;
+}

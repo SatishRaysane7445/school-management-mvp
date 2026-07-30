@@ -1,22 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { logout } from '../../constants/authStorage';
+import DashboardLayout from '../../components/Common/Dashboard/DashboardLayout';
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate("/login", { replace: true });
-  };
-
   return (
-    <div>
+    <DashboardLayout>
       <h1>Dashboard</h1>
-
-      <button onClick={handleLogout}>
-        Logout
-      </button>
-    </div>
+    </DashboardLayout>
   );
 };
 
