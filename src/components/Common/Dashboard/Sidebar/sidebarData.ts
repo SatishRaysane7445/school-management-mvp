@@ -1,41 +1,58 @@
-import {
-    MdDashboard,
-    MdSchool,
-    MdPeople,
-    MdPayment,
-    MdSettings,
-    MdAssignment,
-} from "react-icons/md";
+// import {
+//     MdDashboard,
+//     MdSchool,
+//     MdPeople,
+//     MdPayment,
+//     MdSettings,
+//     MdAssignment,
+// } from "react-icons/md";
+import type { ComponentType } from "react";
 
-export const sidebarMenus = [
+import Dashboard from "../../../../assets/dashboard.png";
+import People from "../../../../assets/teacher.png"
+import School from "../../../../assets/school.png"
+import Payment from "../../../../assets/billing.png"
+import Exam from "../../../../assets/exam.png"
+import Settings from "../../../../assets/setting.png"
+
+
+
+
+export interface SidebarMenu {
+  title: string;
+  path: string;
+  icon: string | ComponentType;
+}
+
+export const sidebarMenus: SidebarMenu[] = [
     {
         title: "Dashboard",
         path: "/dashboard",
-        icon: MdDashboard,
+        icon: Dashboard,
     },
     {
         title: "Teachers",
         path: "/teachers",
-        icon: MdPeople,
+        icon: People,
     },
     {
         title: "Students",
         path: "/students",
-        icon: MdSchool,
+        icon: School,
     },
     {
         title: "Billing",
         path: "/billing",
-        icon: MdPayment,
+        icon: Payment,
     },
     {
-        title: "Settings",
+        title: "Settings & Profile",
         path: "/settings",
-        icon: MdSettings,
+        icon: Settings,
     },
     {
         title: "Exams",
         path: "/exams",
-        icon: MdAssignment,
+        icon: Exam,
     },
 ];
