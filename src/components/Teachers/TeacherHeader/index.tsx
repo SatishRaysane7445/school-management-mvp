@@ -6,9 +6,7 @@ type TeacherHeaderProps = {
 
 
 const TeacherHeader = ({ onExport }: TeacherHeaderProps) => {
-  const handleExport = () => {
-    console.log("Export CSV");
-  };
+
 
   const handleAddTeacher = () => {
     console.log("Add Teacher");
