@@ -1,6 +1,11 @@
 import "./TeacherHeader.css";
 
-const TeacherHeader = () => {
+type TeacherHeaderProps = {
+    onExport: () => void;
+}
+
+
+const TeacherHeader = ({ onExport }: TeacherHeaderProps) => {
   const handleExport = () => {
     console.log("Export CSV");
   };
@@ -14,7 +19,7 @@ const TeacherHeader = () => {
 
       <button
         className="teacher-btn export-btn"
-        onClick={handleExport}
+        onClick={onExport}
       >
         Export CSV
       </button>

@@ -1,6 +1,7 @@
-import type{ Teacher } from "../../../models/teacher";
+import type { Teacher } from '../../../models/teacher';
 
-import "./TeacherTableRow.css";
+import './TeacherTableRow.css';
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 type Props = {
   teacher: Teacher;
@@ -23,15 +24,20 @@ const TeacherTableRow = ({ teacher }: Props) => {
         </div>
       </td>
 
-      <td>{teacher.subject}</td>
-
-      <td>{teacher.className}</td>
-
       <td>{teacher.email}</td>
+      <td>{teacher.phone}</td>
 
       <td>{teacher.gender}</td>
 
-      <td>⋮</td>
+      <td>{teacher.age}</td>
+
+      <td>{teacher.company.title}</td>
+
+      <td className="action-column">
+    <button className="action-btn">
+        <BsThreeDotsVertical />
+    </button>
+</td>
     </tr>
   );
 };

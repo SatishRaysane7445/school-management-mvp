@@ -11,3 +11,15 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.action-column {
+    text-align: center;
+}
+
+.action-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px;
+}

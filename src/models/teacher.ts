@@ -1,12 +1,14 @@
 export interface Teacher {
-  id: number;
-  image: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  gender: string;
+    id: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    age: number;
+    gender: string;
+    image: string;
 
-  // UI-only fields for now
-  subject: string;
-  className: string;
+    company: {
+        title: string;
+    };
 }
