@@ -1,29 +1,33 @@
-import './Header.css';
+import "./Header.css";
 
-import { MdNotificationsNone } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+import type { ReactNode } from "react";
+import { MdNotificationsNone } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
-import { getCurrentUser, logout } from '../../../../constants/authStorage';
+import {
+  getCurrentUser,
+  logout,
+} from "../../../../constants/authStorage";
 
-const Header = () => {
+type HeaderProps = {
+  leftContent?: ReactNode;
+};
+
+const Header = ({ leftContent }: HeaderProps) => {
   const navigate = useNavigate();
 
   const currentUser = getCurrentUser();
 
   const handleLogout = () => {
     logout();
-    navigate('/login', { replace: true });
+    navigate("/login", { replace: true });
   };
 
   return (
     <header className="dashboard-header">
-      <div className="header-content">
-        <h2>Learn how to launch faster</h2>
 
-        <p>
-          Watch our webinar for tips from our experts and get a
-          limited time offer.
-        </p>
+      <div className="header-content">
+        {leftContent}
       </div>
 
       <div className="header-right">
@@ -42,10 +46,14 @@ const Header = () => {
           </div>
         </div>
 
-         <button className="header-logout-btn" onClick={handleLogout}>
+        <button
+          className="header-logout-btn"
+          onClick={handleLogout}
+        >
           Logout
         </button>
       </div>
+
     </header>
   );
 };

@@ -1,0 +1,16 @@
+.dashboard-header-text h2 {
+    margin: 0;
+
+    color: #444;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.dashboard-header-text p {
+    margin-top: 6px;
+
+    color: #5d5d5d;
+    font-size: 18px;
+    line-height: 1.5;
+}

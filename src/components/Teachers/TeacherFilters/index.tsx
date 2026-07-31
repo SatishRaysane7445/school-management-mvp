@@ -1,13 +1,24 @@
 import "./TeacherFilters.css";
-
 import { MdKeyboardArrowDown, MdSearch } from "react-icons/md";
 
-const TeacherFilters = () => {
+type TeacherFiltersProps = {
+  searchValue: string;
+  onSearchChange: (value: string) => void;
+  onFilterClick?: () => void;
+};
+
+const TeacherFilters = ({
+  searchValue,
+  onSearchChange,
+  onFilterClick,
+}: TeacherFiltersProps) => {
   return (
     <div className="teacher-filters">
-
-      <button className="filter-button">
-        <span>Add filter</span>
+      <button
+        className="filter-button"
+        onClick={onFilterClick}
+      >
+        <span>Add Filter</span>
 
         <MdKeyboardArrowDown size={20} />
       </button>
@@ -17,10 +28,11 @@ const TeacherFilters = () => {
 
         <input
           type="text"
+          value={searchValue}
+          onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Search for a teacher by name or email"
         />
       </div>
-
     </div>
   );
 };

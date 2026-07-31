@@ -1,0 +1,23 @@
+.teacher-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.teacher-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teacher-table th,
+.teacher-table td {
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid #ececec;
+}
+
+.teacher-table th {
+  font-size: 14px;
+  color: #8b8b8b;
+  font-weight: 600;
+}
