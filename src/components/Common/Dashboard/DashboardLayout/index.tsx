@@ -1,32 +1,30 @@
-import type{ ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 
 import "./DashboardLayout.css";
-import TopBar from "../TopBar";
 
 type DashboardLayoutProps = {
   children: ReactNode;
+  showHeader?: boolean;
 };
 
-const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+const DashboardLayout = ({
+  children,
+  showHeader = true,
+}: DashboardLayoutProps) => {
   return (
     <div className="dashboard-layout">
-
       <Sidebar />
 
       <div className="dashboard-main">
-
-
-        <Header/>
+        {showHeader && <Header />}
 
         <main className="dashboard-content">
           {children}
         </main>
-
       </div>
-
     </div>
   );
 };

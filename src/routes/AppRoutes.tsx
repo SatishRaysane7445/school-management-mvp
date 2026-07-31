@@ -6,6 +6,7 @@ import Login from '../pages/login';
 import DashboardScreen from '../pages/dashboard';
 import ProtectedRoute from './ProtectedRoute';
 import PublicRoute from './PublicRoute';
+import Teachers from '../pages/teachers';
 
 const AppRoutes = () => {
   return (
@@ -41,6 +42,15 @@ const AppRoutes = () => {
           element={
             <ProtectedRoute>
               <DashboardScreen />
+             
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teachers"
+          element={
+            <ProtectedRoute>
+              <Teachers />
             </ProtectedRoute>
           }
         />
